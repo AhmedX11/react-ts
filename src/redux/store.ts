@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 
 import rootReducer from './reducers';
 
+// Using thunk middleware
 const middleware = [...getDefaultMiddleware(), thunk];
 
 const store = configureStore({
@@ -10,7 +11,6 @@ const store = configureStore({
   middleware,
 });
 
-export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof rootReducer>;
 
 export default store;
